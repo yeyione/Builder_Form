@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            15%       { transform: translateX(-8px); }
+            30%       { transform: translateX(8px); }
+            45%       { transform: translateX(-6px); }
+            60%       { transform: translateX(6px); }
+            75%       { transform: translateX(-3px); }
+            90%       { transform: translateX(3px); }
+        }
+        .shake { animation: shake 0.5s ease both; }
+        .field-error { border-color: rgb(226, 142, 211) !important; }
+        .radio-error { outline: 2px solid red; border-radius: 4px; padding: 4px; }
+    </style>
+</head>
+<body class="container py-5">
+
+    <div class="row mb-4 text-center">
+        <h1>Formulario de datos</h1>
+        <p class="text-muted">
+            Formulario <span id="currentNum">1</span> de 3 —
+            <strong id="formTitle">Datos Básicos</strong>
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="offset-3 col-6">
+            <div id="formCard">
+                <div id="mainContent"></div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4">
+                <button id="btn-prev" class="btn btn-secondary">← Anterior</button>
+                <button id="btn-next" class="btn btn-primary">Siguiente →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
